@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://pet-aggregator.matic.com/pet_requests
+    body:
+      encoding: UTF-8
+      string: '{"kind":null}'
+    headers:
+      User-Agent:
+      - Faraday v2.3.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 08 Jul 2022 09:12:34 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '57'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":"1a96148c-fe9e-11ec-9d5c-83565d8a6c68","kind":null}'
+  recorded_at: Fri, 08 Jul 2022 09:12:34 GMT
+recorded_with: VCR 6.1.0

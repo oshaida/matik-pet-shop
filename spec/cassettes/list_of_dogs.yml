@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://pet-aggregator.matic.com/pet_requests
+    body:
+      encoding: UTF-8
+      string: '{"kind":"dog"}'
+    headers:
+      User-Agent:
+      - Faraday v2.3.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 08 Jul 2022 09:12:37 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '58'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":"1c7c4488-fe9e-11ec-9d5c-ebec0888a6f5","kind":"dog"}'
+  recorded_at: Fri, 08 Jul 2022 09:12:37 GMT
+- request:
+    method: get
+    uri: https://pet-aggregator.matic.com/pet_requests/1c7c4488-fe9e-11ec-9d5c-ebec0888a6f5/offers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 08 Jul 2022 09:12:38 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '351'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"id":"1cb5f6a6-fe9e-11ec-9d5c-17309821e32b","breed":"Bernese Mountain
+        Dogs","price":"454.0"},{"id":"1cb68792-fe9e-11ec-9d5c-f711f2bd52db","breed":"Portuguese
+        Water Dogs","price":"295.0"},{"id":"1cb70a6e-fe9e-11ec-9d5c-43b4e33d0226","breed":"Chihuahuas","price":"493.0"},{"id":"1cb7837c-fe9e-11ec-9d5c-4b2e8f1ab436","breed":"Boxers","price":"159.0"}]'
+  recorded_at: Fri, 08 Jul 2022 09:12:39 GMT
+recorded_with: VCR 6.1.0
